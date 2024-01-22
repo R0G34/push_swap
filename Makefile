@@ -6,7 +6,7 @@
 #    By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/19 11:22:10 by abausa-v          #+#    #+#              #
-#    Updated: 2024/01/19 11:37:05 by abausa-v         ###   ########.fr        #
+#    Updated: 2024/01/22 16:27:31 by abausa-v         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC = gcc
 
 CCFLAGS = -Wall -Werror -Wextra
 
-ICLUDE = push_swap.h
+ICLUDE = push_swap.c
 
 RM = rm -rf
 
