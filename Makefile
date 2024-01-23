@@ -6,7 +6,7 @@
 #    By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/19 11:22:10 by abausa-v          #+#    #+#              #
-#    Updated: 2024/01/22 16:27:31 by abausa-v         ###   ########.fr        #
+#    Updated: 2024/01/23 08:50:01 by abausa-v         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ ICLUDE = push_swap.c
 
 RM = rm -rf
 
-SRCS = push_swap.c
+SRCS = main.c
 
 OBJS = $(SRC:.c=.o)
 
