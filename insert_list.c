@@ -1,38 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   errors.c                                           :+:      :+:    :+:   */
+/*   insert_list.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/25 17:08:11 by abausa-v          #+#    #+#             */
-/*   Updated: 2024/01/25 17:37:31 by abausa-v         ###   ########.fr       */
+/*   Created: 2024/01/25 15:40:48 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/01/25 15:45:59 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
-int	ft_isnumber(char **str)
+typedef struct stack
 {
-	for (int j = 0; str[j] != '\0'; j++)
-		{
-			for (int i = 0; str[j][i] != '\0'; i++)
-			{
-				if (ft_isdigit(str[j][i]) != 1)
-				{
-					printf("ERROR\n");
-					free(str[i]);
-					exit (0);
-				}
-			}
-		}
-	return (1);
-}
-
-int	ft_ismax(char **str)
-{
-	for (int j = 0; str[j] != '\0'; j++)
-	{
-		for (int i = 0; str[j][i] != '\0'; i++)
-		{
-			
-}
+	int	number;
+	struct stack* next;
+};
+typedef struct stack stack_t;

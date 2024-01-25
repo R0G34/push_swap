@@ -25,26 +25,20 @@ char	**ft_strjoinArgs(int argc, char **argv)
 	return (result);
 }
 
-t_list	init_stack(int argc, char **argv)
-{
-	char **str;
-
-	str = ft_strjoinArgs(argc, argv);
-	
-}
-
 int	main(int argc, char **argv)
 {
 	atexit(show_leaks);
 	if (argc > 1)
 	{
-		t_list *stack = init_stack(argc, argv);
-		//char **str = ft_strjoinArgs(argc, argv);
+		char **str = ft_strjoinArgs(argc, argv);
 		/*printf("%p\n", str);*/
-		for (int i = 0; str[i] != NULL; i++)
+		if (ft_isnumber(str) == 1)
 		{
-			printf("%s\n", str[i]);
-			free(str[i]);
+			for (int i = 0; str[i] != NULL; i++)
+			{
+					printf("%s\n", str[i]);
+					free(str[i]);
+			}
 		}
 		free(str);
 	}
