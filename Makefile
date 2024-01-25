@@ -22,7 +22,7 @@ ICLUDE = push_swap.c
 
 RM = rm -rf
 
-SRCS = main.c
+SRCS = main.c errors.c
 
 OBJS = $(SRC:.c=.o)
 

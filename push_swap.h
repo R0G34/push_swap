@@ -19,4 +19,5 @@
  #include "Libft/libft.h"
 
 int	ft_isnumber(char **str);
+int is_valid_int(const char *str); 
 #endif

@@ -28,11 +28,32 @@ int	ft_isnumber(char **str)
 	return (1);
 }
 
-int	ft_ismax(char **str)
+int ft_atoi_mid(const char *str) 
 {
-	for (int j = 0; str[j] != '\0'; j++)
-	{
-		for (int i = 0; str[j][i] != '\0'; i++)
-		{
-			
+    int i = 0;
+    int sign = 1;
+
+    if (str[i] == '+' || str[i] == '-') 
+    {
+        if (str[i] == '-')
+            sign = -1;
+        i++;
+    }
+
+    if (!ft_isdigit(str[i]))
+        return 0;
+
+    long long num = 0;
+    while (ft_isdigit(str[i])) 
+    {
+        num = num * 10 + (str[i] - '0');
+        if ((sign == 1 && num > INT_MAX) || (sign == -1 && num > -(long long)INT_MIN))
+            return 0;
+        i++;
+    }
+
+    if (str[i] != '\0')
+        return 0;
+
+    return 1;
 }
