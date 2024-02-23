@@ -1,6 +1,18 @@
-#include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_rev_rotate_both.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/23 10:12:39 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/02/23 14:18:07 by abausa-v         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static void	ft_rev_rotate_both(t_stack **a, t_stack **b)
+#include "../../include/push_swap.h"
+
+static void	ft_rev_rotate_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
 {
 	while (*cost_a < 0 && *cost_b < 0)
 	{

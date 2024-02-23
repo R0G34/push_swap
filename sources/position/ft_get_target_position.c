@@ -1,4 +1,16 @@
-#include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_get_target_position.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/23 10:13:16 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/02/23 14:18:33 by abausa-v         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../../include/push_swap.h"
 
 void	ft_get_target_position(t_stack **a, t_stack **b)
 {
@@ -12,7 +24,7 @@ void	ft_get_target_position(t_stack **a, t_stack **b)
 	while (aux_b)
 	{
 		target_pos = ft_get_target(a, aux_b->index, INT_MAX, target_pos);
-		aux_b->target_pos = target_pos;
+		aux_b->target = target_pos;
 		aux_b = aux_b->next;
 	}
 }
