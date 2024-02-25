@@ -1,20 +1,20 @@
-#include "../include/push_swap.h"
+#include "../includes/push_swap.h"
 
-t_stack	*ft_get_last(t_stack *stack)
+t_stack	*get_stack_bottom(t_stack *stack)
 {
   while (stack && stack->next != NULL)
     stack = stack->next;
   return (stack);
 }
 
-t_stack	*ft_get_second_last(t_stack *stack)
+t_stack	*get_stack_before_bottom(t_stack *stack)
 {
   while (stack && stack->next && stack->next->next != NULL)
     stack = stack->next;
   return (stack);
 }
 
-t_stack	*ft_new_stack(int value)
+t_stack	*stack_new(int value)
 {
   t_stack	*new;
 
@@ -23,7 +23,7 @@ t_stack	*ft_new_stack(int value)
     return (NULL);
   new->value = value;
   new->index = 0;
-  new->position = -1;
+  new->pos = -1;
   new->target_pos = -1;
   new->cost_a = -1;
   new->cost_b = -1;
@@ -31,7 +31,7 @@ t_stack	*ft_new_stack(int value)
   return (new);
 }
 
-void	ft_add_elem_last(t_stack **stack, t_stack *new)
+void	stack_add_bottom(t_stack **stack, t_stack *new)
 {
   t_stack	*tail;
 
@@ -42,11 +42,11 @@ void	ft_add_elem_last(t_stack **stack, t_stack *new)
     *stack = new;
     return ;
   }
-  tail = ft_get_last(*stack);
+  tail = get_stack_bottom(*stack);
   tail->next = new;
 }
 
-int	ft_size_stack(t_stack	*stack)
+int	get_stack_size(t_stack	*stack)
 {
   int	size;
 

@@ -1,76 +1,84 @@
-NAME 	=	push_swap
-CC		=	gcc
-CFLAGS	=	-Wall -Werror -Wextra
+CC		= gcc
+CFLAGS	= -Wall -Werror -Wextra
+NAME	= push_swap
 
-SRC_PTH =	sources/
-OBJ_PTH =	objects/
+SRC_PATH = src/
+OBJ_PATH = obj/
 
-SRC		= 	main.c \
-			calc_cost.c checkers.c create_stack.c \
-			do_cheap_move.c do_move.c exit.c free.c \
-			get_position.c moves.c push.c reverse_rotate.c \
-			rotate.c small_sort.c sort_algorithm.c stack.c \
-			swap.c utils.c
+SRC		= main.c \
+			calc_cost.c \
+			checker_utils.c \
+			checker.c \
+			create_stack.c \
+			index.c \
+			make_move.c \
+			push_move.c \
+			reverse_rotate_move.c \
+			rotate_move.c \
+			small_sort.c \
+			sort_algorithm.c \
+			stack_operations.c \
+			swap_move.c \
+			utilities.c
+			
+SRCS	= $(addprefix $(SRC_PATH), $(SRC))
+OBJ		= $(SRC:.c=.o)
+OBJS	= $(addprefix $(OBJ_PATH), $(OBJ))
+INCS	= -I ./includes/
 
-SRCS	= 	$(addprefix $(SRC_PTH), $(SRC))
-OBJ		= 	$(SRC:.c=.o)
-OBJS	= 	$(addprefix $(OBJ_PTH), $(OBJ))
-INCS	= 	-I ./include/
-RM 		=	rm -rf
+all: $(OBJ_PATH) $(NAME) 
 
-all: 		$(OBJ_PTH) $(NAME) 
+$(OBJ_PATH)%.o: $(SRC_PATH)%.c
+	$(CC) $(CFLAGS) -c $< -o $@ $(INCS)
 
-$(OBJ_PTH)%.o: $(SRC_PTH)%.c
-			$(CC) $(CFLAGS) -c $< -o $@ $(INCS)
+$(OBJ_PATH):
+	mkdir $(OBJ_PATH)
 
-$(OBJ_PTH):
-			mkdir $(OBJ_PTH)
-
-$(NAME): 	$(OBJS)
-			$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-			$(RM) $(OBJ_PTH)
+	rm -rf $(OBJ_PATH)
 
 fclean: clean
-			$(RM) $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
-test2:		$(NAME)	
-			$(eval ARG = $(shell shuf -i 0-100 -n 2))
-			./push_swap $(ARG) | ./checker_linux $(ARG)
-			@echo -n "Instructions: "
-			@./push_swap $(ARG) | wc -l
+test2:				$(NAME)	
+					$(eval ARG = $(shell shuf -i 0-100 -n 2))
+					./push_swap $(ARG) | ./checker_linux $(ARG)
+					@echo -n "Instructions: "
+					@./push_swap $(ARG) | wc -l
 
-test3:		$(NAME)	
-			$(eval ARG = $(shell shuf -i 0-100 -n 3))
-			./push_swap $(ARG) | ./checker_linux $(ARG)
-			@echo -n "Instructions: "
-			@./push_swap $(ARG) | wc -l
+test3:				$(NAME)	
+					$(eval ARG = $(shell shuf -i 0-100 -n 3))
+					./push_swap $(ARG) | ./checker_linux $(ARG)
+					@echo -n "Instructions: "
+					@./push_swap $(ARG) | wc -l
 
-test5:		$(NAME)	
-			$(eval ARG = $(shell shuf -i 0-5000 -n 5))
-			./push_swap $(ARG) | ./checker_linux $(ARG)
-			@echo -n "Instructions: "
-			@./push_swap $(ARG) | wc -l
+test5:				$(NAME)	
+					$(eval ARG = $(shell shuf -i 0-5000 -n 5))
+					./push_swap $(ARG) | ./checker_linux $(ARG)
+					@echo -n "Instructions: "
+					@./push_swap $(ARG) | wc -l
 
-test100:	$(NAME)	
-			$(eval ARG = $(shell shuf -i 0-5000 -n 100))
-			./push_swap $(ARG) | ./checker_linux $(ARG)
-			@echo -n "Instructions: "
-			@./push_swap $(ARG) | wc -l
+test100:			$(NAME)	
+					$(eval ARG = $(shell shuf -i 0-5000 -n 100))
+					./push_swap $(ARG) | ./checker_linux $(ARG)
+					@echo -n "Instructions: "
+					@./push_swap $(ARG) | wc -l
 
-test500:	$(NAME)	
-			$(eval ARG = $(shell shuf -i 0-5000 -n 500))
-			./push_swap $(ARG) | ./checker_linux $(ARG)
-			@echo -n "Instructions: "
-			@./push_swap $(ARG) | wc -l
+test500:			$(NAME)	
+					$(eval ARG = $(shell shuf -i 0-5000 -n 500))
+					./push_swap $(ARG) | ./checker_linux $(ARG)
+					@echo -n "Instructions: "
+					@./push_swap $(ARG) | wc -l
 
-test1000:	$(NAME)	
-			$(eval ARG = $(shell shuf -i 0-5000 -n 1000))
-			./push_swap $(ARG) | ./checker_linux $(ARG)
-			@echo -n "Instructions: "
-			@./push_swap $(ARG) | wc -l
+test1000:			$(NAME)	
+					$(eval ARG = $(shell shuf -i 0-5000 -n 1000))
+					./push_swap $(ARG) | ./checker_linux $(ARG)
+					@echo -n "Instructions: "
+					@./push_swap $(ARG) | wc -l
 					
 .PHONY: all clean fclean re test2 test3 test5 test100 test500 test1000
