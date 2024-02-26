@@ -48,23 +48,25 @@ static int	arg_is_zero(char *av)
   return (1);
 }
 
-int	is_correct_input(char **av)
+int	is_correct_input(char **splitted)
 {
-  int	i;
-  int	nb_zeros;
+	int	i;
+	int j;
+	int	nb_zeros;
 
-  nb_zeros = 0;
-  i = 1;
-  while (av[i])
-  {
-    if (!arg_is_number(av[i]))
-      return (0);
-    nb_zeros += arg_is_zero(av[i]);
-    i++;
-  }
-  if (nb_zeros > 1)
-    return (0);
-  if (have_duplicates(av))
-    return (0);
-  return (1);
+	nb_zeros = 0;
+	i = 1;
+	j = 0;
+	while (splitted[i])
+	{
+		if (!arg_is_number(splitted[i]))
+			return (0);
+		nb_zeros += arg_is_zero(splitted[i]);
+		i++;
+  	}
+	if (nb_zeros > 1)
+		return (0);
+	if (have_duplicates(splitted))
+		return (0);
+	return (1);
 }
