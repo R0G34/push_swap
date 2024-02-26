@@ -65,5 +65,9 @@ int			is_correct_input(char **splitted);
 int			is_digit(char c);
 int			is_sign(char c);
 int			nbstr_cmp(const char *s1, const char *s2);
+int	    ft_strlen(const	char *s);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+char	  *ft_strjoin(const char *s1, const char *s2);
+char	  **ft_split(const char *s, char c);
 
 #endif

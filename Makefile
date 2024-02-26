@@ -16,7 +16,6 @@ NAME	= 	push_swap
 
 SRC_PATH = 	sources/
 OBJ_PATH = 	obj/
-DEPS	=	Libft/libft.a
 
 SRC		= 	main.c \
 			calc_cost.c \
