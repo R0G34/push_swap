@@ -56,5 +56,7 @@ int			nbstr_cmp(const char *s1, const char *s2);
 char		**ft_split(const char *s, char c);
 int			ft_strlen(const	char *s);
 int 		ft_strcmp(const char *s1, const char *s2);
+int     is_valid_argument(char *arg);
+int     have_duplicates(char **av);
 
 #endif

@@ -77,26 +77,20 @@ int main(int ac, char **av)
     t_stack *stack_b;
     int stack_size;
 
-    if (ac < 2)
+    if (ac < 2 || !is_correct_input(av) || (ac == 2 && av[1][0] == '\0'))
     {
-        ft_putstr("Error: No arguments provided.\n");
-        return (1);
-    }
-
-    if (!is_correct_input(av))
-    {
-        ft_putstr("Error: Invalid input format.\n");
+        write(2, "Error\n", 6);
         return (1);
     }
 
     char **tokens;
     if (ac == 2 && av[1][0] == '\"')
     {
-        tokens = ft_split(&av[1][1], '\"'); // Dividir la cadena en tokens usando "
+        tokens = ft_split(&av[1][1], '\"');
     }
     else
     {
-        tokens = av + 1; // Usar los argumentos directamente
+        tokens = av + 1;
     }
 
     stack_b = NULL;
@@ -106,7 +100,7 @@ int main(int ac, char **av)
 
     if (ac == 2 && av[1][0] == '\"')
     {
-        free(tokens); // Liberar la memoria asignada al array de tokens
+        free(tokens);
     }
 
     stack_size = get_stack_size(stack_a);

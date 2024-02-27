@@ -52,7 +52,7 @@ if [ -z "$1" ] || [ $1 != -b ]; then
 printf ${BLUE}"\n-------------------------------------------------------------\n"${DEF_COLOR};
 printf ${BLUE}"\n\t\t\tCONTROL ERRORS\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
-
+#1
 ARG="a"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -70,7 +70,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#2
 ARG="111a11"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -88,7 +88,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#3
 ARG="hello world"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -106,7 +106,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#4
 ./push_swap "" > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
@@ -123,7 +123,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#5
 ARG="0 0"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -141,7 +141,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#6
 ARG="-01 -001"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -159,7 +159,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#7
 ARG="111-1 2 -3"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -177,7 +177,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#8
 ARG="-3 -2 -2"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -195,7 +195,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#9
 ARG="\n"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -213,7 +213,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#10
 ARG="-2147483649"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -231,7 +231,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#11
 ARG="-2147483650"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -249,7 +249,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#12
 ARG="2147483648"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -267,7 +267,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#13
 ARG="8 008 12"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -285,7 +285,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#14
 ARG="10 -1 -2 -3 -4 -5 -6 90 99 10"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -303,7 +303,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#15
 ARG="1 +1 -1"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -321,7 +321,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#16
 ARG="3333-3333 1 4"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -339,7 +339,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#17
 ARG="111a111 -4 3"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -357,7 +357,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#18
 ARG="111111 -4 3 03"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -375,7 +375,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#19
 ARG="2147483649"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -393,7 +393,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#20
 ARG="2147483647+1"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -411,7 +411,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#21
 ARG="0 1 2 3 4 5 0"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -429,7 +429,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#22
 ARG="3 +3"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -447,7 +447,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#23
 ARG="3+3"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -465,7 +465,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#24
 ARG="42 42"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -483,7 +483,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#25
 ARG="42 -42 -42 "
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -501,7 +501,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#26
 ARG="4222-4222"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -519,7 +519,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#27
 ARG="99999999999999999999999999"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -537,7 +537,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#28
 ARG="-99999999999999999999999999"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -555,7 +555,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#29
 ARG="0 -0 1 -1"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -573,7 +573,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#30
 ARG="0 +0 1 -1"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -591,7 +591,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#31
 ARG="111+111 -4 3"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -609,7 +609,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#32
 ARG="-"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -625,7 +625,7 @@ done < test_check.txt
 else
 	printf "${RED}32.[KO] ${DEF_COLOR}\n";
 fi
-
+#33
 ARG="+"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -643,7 +643,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#34
 ARG="--123 1 321"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -661,7 +661,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#35
 ARG="++123 1 321"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -679,7 +679,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#36
 ARG="0000000000000000000000009 000000000000000000000009"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -697,7 +697,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#37
 ARG="00000001 1 9 3"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -715,7 +715,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#38
 ARG="00000003 003 9 1"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -733,7 +733,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#39
 ARG="--21345"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -752,7 +752,7 @@ fi
 
 rm -rf test_check.txt
 
-
+#40
 ARG="1 01"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -770,7 +770,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#41
 ARG="-000 -0000"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
@@ -788,7 +788,7 @@ else
 fi
 
 rm -rf test_check.txt
-
+#42
 ARG="-00042 -000042"
 ./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then

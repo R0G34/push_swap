@@ -4,19 +4,37 @@ int is_valid_argument(char *arg)
 {
     int i = 0;
     int has_space = 0;
+    int has_sign = 0;
+    int sign_index = -1;
 
     while (arg[i])
     {
         if (!is_digit(arg[i]) && arg[i] != ' ' && arg[i] != '-' && arg[i] != '+')
             return (0);
-        if (arg[i] == ' ' && arg[i + 1] == '\0')
+        else if (arg[i] == ' ' && arg[i + 1] == '\0')
             has_space = 1;
+        else if ((arg[i] == '-' || arg[i] == '+') && i != 0)
+            has_sign = 1;
+        else if (arg[i] == '-' && i != 0)
+            return (0);
+        else if (arg[i] == '-' && is_digit(arg[i + 1]))
+            sign_index = i;
+        else if (is_digit(arg[i]) && arg[i] == '0' && arg[i + 1] != '\0' && arg[i + 1] != ' ')
+            return (0);
         i++;
     }
-    if (has_space)
+
+    if (has_space || has_sign)
         return (0);
-    if (ft_strcmp(arg, "0") == 0)
+    else if (sign_index != -1 && arg[sign_index + 1] == '0')
         return (0);
+    else if (ft_strcmp(arg, "+") == 0 || ft_strcmp(arg, "-") == 0)
+        return (0);
+
+    long long num = atoll(arg);
+    if (num < INT_MIN || num > INT_MAX)
+        return (0);
+
     return (1);
 }
 
