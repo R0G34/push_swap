@@ -1,71 +1,57 @@
 #include "../includes/push_swap.h"
 
-void	free_stack(t_stack **stack)
+int	is_digit(char c)
 {
-  t_stack	*tmp;
-
-  if (!stack || !(*stack))
-    return ;
-  while (*stack)
-  {
-    tmp = (*stack)->next;
-    free(*stack);
-    *stack = tmp;
-  }
-  *stack = NULL;
+  return (c >= '0' && c <= '9');
 }
 
-void	exit_error(t_stack **stack_a, t_stack **stack_b)
+int	is_sign(char c)
 {
-  if (stack_a == NULL || *stack_a != NULL)
-    free_stack(stack_a);
-  if (stack_b == NULL || *stack_b != NULL)
-    free_stack(stack_b);
-  write(2, "Error\n", 6);
-  exit (1);
+  return (c == '+' || c == '-');
 }
 
-long int	ft_atoi(const char *str)
-{
-  long int	nb;
-  int			isneg;
-  int			i;
-
-  nb = 0;
-  isneg = 1;
-  i = 0;
-  if (str[i] == '+')
-    i++;
-  else if (str[i] == '-')
-  {
-    isneg *= -1;
-    i++;
-  }
-  while (is_digit(str[i]))
-  {
-    nb = (nb * 10) + (str[i] - '0');
-    i++;
-  }
-  return (nb * isneg);
-}
-
-void	ft_putstr(char *str)
+int	nbstr_cmp(const char *s1, const char *s2)
 {
   int	i;
+  int	j;
 
   i = 0;
-  while (str[i])
+  j = i;
+  if (s1[i] == '+')
   {
-    write(1, &str[i], 1);
-    i++;
+    if (s2[j] != '+')
+      i++;
   }
+  else
+  {
+    if (s2[j] == '+')
+      j++;
+  }
+  while (s1[i] != '\0' && s2[j] != '\0' && s1[i] == s2[j])
+  {
+    i++;
+    j++;
+  }
+  return ((unsigned char)s1[i] - (unsigned char)s2[j]);
 }
 
-int	nb_abs(int nb)
+size_t	ft_sublen(const char *s, char c)
 {
-  if (nb < 0)
-    return (nb * -1);
-  return (nb);
+	size_t	res;
+
+	res = 0;
+	while (*s)
+	{
+		if (*s != c)
+		{
+			++res;
+			while (*s && *s != c)
+				++s;
+		}
+		else
+			++s;
+	}
+	return (res);
 }
 
 int	ft_strlen(const	char *s)
@@ -161,25 +147,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	return (result);
 }
 
-size_t	ft_sublen(const char *s, char c)
-{
-	size_t	res;
-
-	res = 0;
-	while (*s)
-	{
-		if (*s != c)
-		{
-			++res;
-			while (*s && *s != c)
-				++s;
-		}
-		else
-			++s;
-	}
-	return (res);
-}
-
 char	**ft_split(const char *s, char c)
 {
 	char	**res;
@@ -206,4 +173,14 @@ char	**ft_split(const char *s, char c)
 	}
 	res[i] = 0;
 	return (res);
+}
+
+int ft_strcmp(const char *s1, const char *s2)
+{
+    while (*s1 && (*s1 == *s2))
+    {
+        s1++;
+        s2++;
+    }
+    return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
