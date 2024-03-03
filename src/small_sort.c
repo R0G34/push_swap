@@ -1,30 +1,23 @@
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
-static int	find_highest_index(t_stack *stack)
+int	small_sort(t_stack **stack_a)
 {
-  int		index;
+	int	first;
+	int	second;
+	int last;
 
-  index = stack->index;
-  while (stack)
-  {
-    if (stack->index > index)
-      index = stack->index;
-    stack = stack->next;
-  }
-  return (index);
-}
-
-void	tiny_sort(t_stack **stack)
-{
-  int		highest;
-
-  if (is_sorted(*stack))
-    return ;
-  highest = find_highest_index(*stack);
-  if ((*stack)->index == highest)
-    do_ra(stack);
-  else if ((*stack)->next->index == highest)
-    do_rra(stack);
-  if ((*stack)->index > (*stack)->next->index)
-    do_sa(stack);
+	first = (*stack_a)->value;
+	second = stack_second_last((*stack_a))->value;
+	last = stack_last((*stack_a))->value;
+	if (smallest((*stack_a)) == last && biggest((*stack_a)) == second)
+		return (ft_rra(stack_a), 0);
+	else if (smallest((*stack_a)) == second && biggest((*stack_a)) == first)
+		return (ft_ra(stack_a), 0);
+	else if (smallest((*stack_a)) == second && biggest((*stack_a)) == last)
+		return (ft_sa(stack_a), 0);
+	else if (smallest((*stack_a)) == last && biggest((*stack_a)) == first)
+		return (ft_sa(stack_a), ft_rra(stack_a), 0);
+	else if (smalles((*stack_a)) == first && biggest((*stack_a)) == second)
+		return (ft_sa(stack_a), ft_ra(stack_a), 0);
+	return (1);
 }

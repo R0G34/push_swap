@@ -6,20 +6,16 @@ SRC_PATH = src/
 OBJ_PATH = obj/
 
 SRC		= main.c \
-			calc_cost.c \
-			checker_utils.c \
-			checker.c \
-			create_stack.c \
-			index.c \
-			make_move.c \
-			push_move.c \
-			reverse_rotate_move.c \
-			rotate_move.c \
+			checkers.c.c \
+			error_exit.c \
+			free.c \
+			moves.c \
 			small_sort.c \
-			sort_algorithm.c \
-			stack_operations.c \
-			swap_move.c \
-			utilities.c
+			sort.c \
+			sorting_five.c \
+			sorting_four.c \
+			stack.c \
+			utils.c \
 			
 SRCS	= $(addprefix $(SRC_PATH), $(SRC))
 OBJ		= $(SRC:.c=.o)

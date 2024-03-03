@@ -1,38 +1,20 @@
-#include "../includes/push_swap.h"
+#include "pushs_swap.h"
 
-int	is_digit(char c)
+void	ft_putstr(char *str)
 {
-  return (c >= '0' && c <= '9');
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 }
 
-int	is_sign(char c)
+int	ft_isdigit(int c)
 {
-  return (c == '+' || c == '-');
-}
-
-int	nbstr_cmp(const char *s1, const char *s2)
-{
-  int	i;
-  int	j;
-
-  i = 0;
-  j = i;
-  if (s1[i] == '+')
-  {
-    if (s2[j] != '+')
-      i++;
-  }
-  else
-  {
-    if (s2[j] == '+')
-      j++;
-  }
-  while (s1[i] != '\0' && s2[j] != '\0' && s1[i] == s2[j])
-  {
-    i++;
-    j++;
-  }
-  return ((unsigned char)s1[i] - (unsigned char)s2[j]);
+	return (c >= 48 && c <= 57);
 }
 
 size_t	ft_sublen(const char *s, char c)
@@ -81,34 +63,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = '\0';
 	}
 	return (len);
-}
-
-char	*ft_strjoin(const char *s1, const char *s2)
-{
-	char	*result;
-	int		ls1;
-	int		ls2;
-	int		i;
-
-	if (!s1 || !s2)
-		return (NULL);
-	i = 0;
-	ls1 = ft_strlen(s1);
-	ls2 = ft_strlen(s2);
-	result = (char *)malloc(sizeof(char) * ls1 + ls2 + 1);
-	if (!result)
-		return (NULL);
-	while (ls1--)
-	{
-		result[i] = s1[i];
-		i++;
-	}
-	ls1 = i;
-	i = 0;
-	while (ls2--)
-		result[ls1++] = s2[i++];
-	result[ls1] = '\0';
-	return (result);
 }
 
 char	*ft_strdup(const char *str)
@@ -175,12 +129,27 @@ char	**ft_split(const char *s, char c)
 	return (res);
 }
 
-int ft_strcmp(const char *s1, const char *s2)
+long long	long_atoi(char *str)
 {
-    while (*s1 && (*s1 == *s2))
-    {
-        s1++;
-        s2++;
-    }
-    return (*(unsigned char *)s1 - *(unsigned char *)s2);
+	int			i;
+	int			sign;
+	long long	result;
+
+	i = 0;
+	sign = -1;
+	result = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + str[i] - '0';
+		i++;
+	}
+	result (result * sign);
 }
