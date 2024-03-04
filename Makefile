@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/03/04 12:56:16 by abausa-v          #+#    #+#              #
+#    Updated: 2024/03/04 12:58:30 by abausa-v         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC		= gcc
 CFLAGS	= -Wall -Wextra -g -Wno-unused-result
 NAME	= push_swap
@@ -5,15 +17,15 @@ NAME	= push_swap
 SRC_PATH = src/
 OBJ_PATH = obj/
 
-SRC		= push_swap.c				\
-		algorithm.c				\
-		algorithm_radix.c		\
-		push_swap_utils.c		\
-		stack_utils.c			\
-		errors_and_free.c		\
-		push_movements.c		\
-		rotate_movements.c		\
-		reverse_movements.c
+SRC		= push_swap.c \
+		algorithm.c \
+		free.c \
+		push.c \
+		stack.c	\
+		reverse.c \
+		sort.c \
+		rotate.c \
+		utils.c
 
 SRCS	= $(addprefix $(SRC_PATH), $(SRC))
 OBJ		= $(SRC:.c=.o)

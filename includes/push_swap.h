@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/04 12:47:52 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/04 12:49:23 by abausa-v         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 # include "../libft/libft.h"
 
 typedef struct t_stack
 {
-  int				number;
-  int				id;
-  struct t_stack	*next;
+	int				number;
+	int				id;
+	struct t_stack	*next;
 }					t_stack;
 
 int			ft_algorithm(t_stack **lst_a, t_stack **lst_b);
