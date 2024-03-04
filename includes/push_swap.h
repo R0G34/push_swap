@@ -1,43 +1,50 @@
-#ifndef	PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# include <stddef.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <limits.h>
-# include <stdio.h>
+# include "../libft/libft.h"
 
-typedef struct	s_stack
+typedef struct t_stack
 {
-	int				value;
-	int				position;
-	struct s_stack	*next;
-}				t_stack;
+  int				number;
+  int				id;
+  struct t_stack	*next;
+}					t_stack;
 
-int			is_valid_arg(int argc, char **argv);
-void		error_exit(int n);
-t_stack		*fill_stack_values(int argc, char **argv);
-int			ft_isdigit(int c);
-char		**ft_split(const char *s, char c);
-int			is_duplicated(t_stack *stack);
-int			is_sorted(t_stack *stack);
-int			is_valid_arg(int argc, char **argv);
-int			sort_algorithm(t_stack **stack_a, t_stack **stack_b);
-void		free_stack(t_stack **stack);
-void		ft_putstr(char *str);
-t_stack		*stack_second_last(t_stack *node);
-t_stack		*stack_last(t_stack *node);
-int			smallest(t_stack *node);
-int			biggest(t_stack *node);
-void		ft_rra(t_stack **stack);
-void		ft_ra(t_stack **stack_a);
-void		ft_sa(t_stack **stack_a);
-int			size_stack(t_stack *stack);
-int			small_sort(t_stack **stack_a);
-int			sorting_four(t_stack **stack_a, t_stack **stack_b);
-int			sorting_five(t_stack **stack_a, t_stack stack_b);
-void		ft_pb(t_stack **stack_a, t_stack **stack_b);
-void		ft_pa(t_stack **stack_a, t_stack **stack_b);
-long long	long_atoi(char *str);
-void		*free_splitted(char **splitted);
+int			ft_algorithm(t_stack **lst_a, t_stack **lst_b);
+int			sorting_five_numbers(t_stack **lst_a, t_stack **lst_b);
+int			sorting_five_numbers_bis(t_stack **lst_a, t_stack **lst_b, int min);
+int			sorting_four_numbers(t_stack **lst_a, t_stack **lst_b);
+int			sorting_four_numbers_bis(t_stack **lst_a, t_stack **lst_b, int min);
+int			sorting_three_numbers(t_stack **lst_a);
+void		leaks(void);
+int			ft_error(int e);
+void		*ft_arr_free(char **splt);
+void		ft_stk_free(t_stack **stack);
+int			args_sign_numbers_or_spaces(int argc, char **argv);
+t_stack		*args_to_integer_and_add(int argc, char **argv);
+int			not_repeated_numbers(t_stack *begin);
+int			numbers_in_order(t_stack *lst);
+long long	ft_atoll_int(char *str);
+void		ft_stack_add_back(t_stack **lst, t_stack *new);
+void		ft_stack_add(int nb, t_stack **new);
+int			stack_length(t_stack *stack);
+int			ft_min_node(t_stack *node);
+int			ft_max_node(t_stack *node);
+t_stack		*ft_stack_second_last(t_stack *node);
+t_stack		*ft_stack_last(t_stack *node);
+void		ft_sa(t_stack **lst_a, char *str);
+void		ft_sb(t_stack **lst_b, char *str);
+void		ft_ss(t_stack **lst_a, t_stack **lst_b, char *str);
+void		ft_pa(t_stack **lst_a, t_stack **lst_b, char *str);
+void		ft_pb(t_stack **lst_a, t_stack **lst_b, char *str);
+void		ft_ra(t_stack **lst_a, char *str);
+void		ft_rb(t_stack **lst_b, char *str);
+void		ft_rr(t_stack **lst_a, t_stack **lst_b, char *str);
+void		ft_rra(t_stack **lst_a, char *str);
+void		ft_rrb(t_stack **lst_b, char *str);
+void		ft_rrr(t_stack **lst_a, t_stack **lst_b, char *str);
+int			ft_stacksize(t_stack *lst);
+void		ft_node_id_assignment(t_stack **stack);
+int			ft_bits(int lst_size);
+void		ft_radix(t_stack **lst_a, t_stack **lst_b);
 
 #endif

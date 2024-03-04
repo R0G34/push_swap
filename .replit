@@ -1,0 +1,11 @@
+modules = ["bash:v1-20231215-e6d471c"]
+run = "./main"
+compile = "make"
+
+[nix]
+channel = "stable-23_05"
+
+[deployment]
+run = ["sh", "-c", "./main"]
+deploymentTarget = "cloudrun"
+build = ["sh", "-c", "make"]
