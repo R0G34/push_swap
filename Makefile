@@ -6,12 +6,12 @@
 #    By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/04 12:56:16 by abausa-v          #+#    #+#              #
-#    Updated: 2024/03/04 12:58:30 by abausa-v         ###   ########.fr        #
+#    Updated: 2024/03/06 17:55:06 by abausa-v         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		= gcc
-CFLAGS	= -Wall -Wextra -g -Wno-unused-result
+CFLAGS	= -Wall -Werror -Wextra -g
 NAME	= push_swap
 
 SRC_PATH = src/

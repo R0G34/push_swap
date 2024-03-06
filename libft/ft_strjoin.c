@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 11:00:11 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/05 16:18:32 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:21:33 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:21:37 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	strnew [len1 + len2] = '\0';
 	return (strnew);
 }
-/**
- * The function `ft_strjoin` concatenates two strings `s1` and `s2` and
- * returns a new string.
- * 
- * @param s1 A pointer to a constant character string (string 1)
- * @param s2 The parameter `s2` is a pointer to a constant character string.
- * 
- * @return The function `ft_strjoin` returns a pointer to a newly allocated
- * string that is the concatenation of `s1` and `s2`.
- */

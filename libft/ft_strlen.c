@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 13:07:10 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/02 17:06:17 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:22:38 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:22:43 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,3 @@ int	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-/**
- * The function ft_strlen calculates the length of a string by counting
- * the number of characters until it reaches the null terminator.
- * 
- * @param str A pointer to a character array (string)
- * 
- * @return the length of the string.
- */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 11:02:15 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/11 17:02:34 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:20:55 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:20:58 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,3 @@ void	ft_putnbr_fd(int nb, int fd)
 		write(fd, &digit, 1);
 	}
 }
-/**
- * @param nb_aux The parameter "nb_aux" is a long to manage the minimum value
- * of an integer (-2147483648).
- */
-
-/**
- * The function `ft_putnbr_fd` takes an integer and a file descriptor as input
- * and writes the integer to the specified file descriptor.
- * 
- * @param nb The number to be printed.
- * @param fd The parameter "fd" represents the file descriptor of the file
- * where the output will be written.
- */

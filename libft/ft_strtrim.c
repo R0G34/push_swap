@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 11:00:29 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/06 17:08:16 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:23:21 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:23:28 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (ft_substr(s1, start, end - start));
 }
-/**
- * The function `ft_strtrim` trims the characters specified in the `set`
- * parameter from the beginning and end of the string `s1`.
- * 
- * @param s1 The parameter `s1` is a pointer to a constant character
- * string that we want to trim.
- * @param set The "set" parameter is a string that contains a set of characters
- * that we want to remove from the beginning and end of the "s1" string.
- * 
- * @return a trimmed version of the input string `s1`.
- */

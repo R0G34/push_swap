@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 15:40:44 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/23 10:54:42 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:21:23 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:21:25 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,3 @@ char	*ft_strdup(const char *str)
 	ptr[length] = '\0';
 	return (ptr);
 }
-/**
- * The length + 1 is the extra bit needed for
- * '\0' at the end of the string.
-*/
-
-/**
- * The function `ft_strdup` duplicates a given string and returns a pointer
- * to the duplicated string.
- * 
- * @param str The parameter "str" is a pointer to a constant character string.
- * 
- * @return a pointer to a newly allocated memory block that contains a
- * duplicate of the input string.
- */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 11:01:45 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/11 16:33:18 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:21:01 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:21:04 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,3 @@ void	ft_putstr_fd(char *str, int fd)
 		aux++;
 	}
 }
-/**
- * The function `ft_putstr_fd` writes a string to a specified file descriptor.
- * 
- * @param str A pointer to a character array (string) that we want to write to
- * the file descriptor.
- * @param fd The parameter "fd" is an integer representing the file descriptor
- * of the file where the string will be written.
- */

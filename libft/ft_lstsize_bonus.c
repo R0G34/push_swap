@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 13:07:18 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/12 16:27:02 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:19:29 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:19:32 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-/**
- * The function `ft_lstsize` calculates the size of a linked list.
- * 
- * @param lst The parameter "lst" is a pointer to a linked list of
- * type "t_list".
- * 
- * @return the size of the linked list.
- */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 13:07:13 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/12 14:23:42 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:21:40 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:21:44 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dest_length] = 0;
 	return (src_length + ori_dest_length);
 }
-/**
- * The ft_strlcat function concatenates two strings, ensuring that the
- * resulting string does not exceed a specified size.
- * 
- * @param str The parameter `str` is not used in the code provided.
- * 
- * @return The function `ft_strlcat` returns the total length of the
- * concatenated string, which is the sum of the original length of the
- * destination string (`ori_dest_length`) and the length of the source
- * string (`src_length`).
- */

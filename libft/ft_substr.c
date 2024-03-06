@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 10:59:50 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/05 16:19:46 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:23:30 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:23:33 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,18 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub_s[sub_i] = '\0';
 	return (sub_s);
 }
-
-/**
- * The function `ft_substr` takes a string `s`, a starting index `start`,
- * and a length `len`, and returns a substring of `s` starting from `start`
- * with a length of `len`.
- * 
- * @param s A pointer to a constant character string (input string).
- * @param start The start parameter is the index at which the substring
- * should start in the original string.
- * @param len The `len` parameter in the `ft_substr` function is the maximum
- * length of the substring that you want to extract from the input string `s`.
- * 
- * @return The function `ft_substr` returns a pointer to a newly allocated
- * substring of the input string `s`.
- */

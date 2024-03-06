@@ -6,7 +6,7 @@
 /*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 12:53:30 by abausa-v          #+#    #+#             */
-/*   Updated: 2024/03/04 16:42:43 by abausa-v         ###   ########.fr       */
+/*   Updated: 2024/03/06 19:16:53 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,6 @@ int	main(int argc, char **argv)
 
 	lst_a = NULL;
 	lst_b = NULL;
-	atexit(leaks);
 	if (argc > 1 && argv[1])
 	{
 		if (args_sign_numbers_or_spaces(argc, argv) != 0)
@@ -120,10 +119,7 @@ int	main(int argc, char **argv)
 				ft_error(1);
 		}
 		if (numbers_in_order(lst_a) != 0)
-		{
-			ft_stk_free(&lst_a);
-			return (0);
-		}
+			return (ft_stk_free(&lst_a), 0);
 		if (not_repeated_numbers(lst_a) == 0 && numbers_in_order(lst_a) == 0)
 			ft_algorithm(&lst_a, &lst_b);
 		else

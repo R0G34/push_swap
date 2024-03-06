@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/15 11:19:54 by fsantill          #+#    #+#             */
-/*   Updated: 2024/02/12 15:14:31 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:24:03 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:24:50 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@
 #  define BUFFER_SIZE 42
 # endif
 
-/* LIBFT ------------------------------------------------------------------- */
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
@@ -61,9 +60,7 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *str, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int nb, int fd);
-/* ------------------------------------------------------------------------- */
 
-/* LIBFT BONUS (LISTS) ----------------------------------------------------- */
 typedef struct s_list
 {
 	void			*content;
@@ -80,18 +77,14 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), \
 void (*del)(void *));
-/* ------------------------------------------------------------------------- */
 
-/* GET NEXT LINE BONUS FUNCTIONS ------------------------------------------- */
 char			*get_next_line(int fd);
 int				ft_strlen_to_limit(char *str, int delimiter);
 char			*ft_strchr_mod(char *str, int c);
 char			*ft_strdup_mod(char *str);
 char			*ft_strjoin_mod(char *s1, char *s2);
 char			*ft_substr_mod(char *s, unsigned int start, size_t len);
-/* ------------------------------------------------------------------------- */
 
-/* PRINTF FUNCTIONS -------------------------------------------------------- */
 int				ft_putchar_mod(char c, int printcount);
 int				ft_putstr_mod(char *str, int printcount);
 int				ft_puthex_low(unsigned long long h, int printcount);
@@ -102,6 +95,5 @@ int				ft_putnbr_mod_unsigned(unsigned int nb, int printcount);
 int				ft_checking_the_format(char *str, int i, va_list args, \
 int printcount);
 int				ft_printf(char const *str, ...);
-/* ------------------------------------------------------------------------- */
 
 #endif

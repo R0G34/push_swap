@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 13:26:45 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/02 14:15:04 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:19:42 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:19:50 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,3 @@ int	ft_memcmp(const void *buffer1, const void *buffer2, size_t count)
 	}
 	return (0);
 }
-
-/**
- * The function `ft_memcmp` compares two memory buffers and returns an
- * integer indicating their relative order.
- * 
- * @param buffer1 A pointer to the first buffer of memory to be compared.
- * @param buffer2 The `buffer2` parameter is a pointer to the second buffer
- * that you want to compare.
- * It is of type `const void *`, which means it can be a pointer to any
- * type of data.
- * @param count The parameter "count" represents the number of bytes to
- * compare between the two buffers.
- * 
- * @return an integer value. If the contents of buffer1 are less than the
- * contents of buffer2, it returns -1. If the contents of buffer1 are greater
- * than the contents of buffer2, it returns 1. If the contents of buffer1 are
- * equal to the contents of buffer2, it returns 0.
- */

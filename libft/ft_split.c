@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: francrypto <francrypto@student.42.fr>      +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 11:00:43 by fsantill          #+#    #+#             */
-/*   Updated: 2024/02/06 04:54:51 by francrypto       ###   ########.fr       */
+/*   Created: 2024/03/06 19:21:06 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:21:14 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,56 +83,3 @@ char	**ft_split(const char *s, char c)
 	result = auxiliary_strsplit(strsplit, (char *)s, c, countsubstr);
 	return (result);
 }
-/**
- * The static function `count_substr_in_str` counts the number of substrings
- * in a given string that are separated by a specified character.
- * 
- * @param s The parameter `s` is a pointer to a character array (string)
- * that represents the input string.
- * @param c The parameter `c` is a character that we want to count the
- * occurrences of in the string `s`.
- * 
- * @return the number of occurrences of a character 'c' in a given string 's'.
- */
-
-/**
- * Static function `arrays_freedom` frees the memory allocated for a 2D array
- * of characters.
- * 
- * @param ptr ptr is a pointer to a pointer to a character. It represents a
- * dynamically allocated 2D array of characters.
- * @param m The parameter `m` represents the number of elements in the
- * array `ptr`.
- * 
- * @return 0.
- */
-
-/**
- * The function `auxiliary_strslip` takes a string `s` and a character `c`,
- * and splits `s` into substrings based on the delimiter `c`, returning an
- * array of the substrings.
- * 
- * @param aux_strsplit A pointer to a pointer to a character array. This is
- * used to store the substrings of the input string.
- * @param s A pointer to a string that needs to be split into substrings.
- * @param c The parameter 'c' is a character that is used as a delimiter
- * to split the string 's' into substrings.
- * @param aux_countsubstr The parameter `aux_countsubstr` represents the number
- * of substrings that need to be extracted from the string `s`.
- * 
- * @return a pointer to a character array (char **) called aux_strsplit.
- */
-
-/**
- * The function `ft_split` takes a string `s` and a character `c` as input
- * and splits the string into substrings based on the delimiter `c`.
- * 
- * @param s The parameter `s` is a pointer to a constant character string.
- * It represents the input string that needs to be split into substrings based
- * on the delimiter `c`.
- * @param c The parameter 'c' is a character that is used as a delimiter to
- * split the string 's' into substrings.
- * 
- * @return The function `ft_split` is returning a pointer to a pointer of
- * characters (`char **`).
- */

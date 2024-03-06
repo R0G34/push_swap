@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/15 15:36:25 by fsantill          #+#    #+#             */
-/*   Updated: 2023/09/29 16:21:55 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:20:19 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:20:20 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,3 @@ void	*ft_memmove(void *dest, const void *src, size_t count)
 			*(unsigned char *)dest++ = *(unsigned char *)src++;
 	return (destiny);
 }
-/**
- * The function `ft_memmove` copies a specified number of bytes from the
- * source memory location to the destination memory location,
- * handling overlapping memory regions correctly.
- * 
- * @param dest The `dest` parameter is a pointer to the destination memory
- * where the copied data will be stored.
- * @param src The `src` parameter is a pointer to the source memory
- * location from where the data will be copied.
- * @param count The parameter "count" represents the number of bytes
- * to be copied from the source memory location to the destination
- * memory location.
- * 
- * @return a pointer to the destination memory block.
- */

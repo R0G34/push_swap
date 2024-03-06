@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 12:21:05 by fsantill          #+#    #+#             */
-/*   Updated: 2023/12/04 12:50:57 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:23:48 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:23:54 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,14 +99,3 @@ char	*get_next_line(int fd)
 		ft_freedom(&buffer[fd]);
 	return (line);
 }
-
-/**
- * The function `get_next_line` reads a file descriptor line by line and
- * returns each line as a string.
- * 
- * @param p p is a pointer to a pointer to a character (char **).
- * It is used to store the address of a character pointer.
- * 
- * @return The function `get_next_line` returns a line of text read from
- * a file descriptor.
- */

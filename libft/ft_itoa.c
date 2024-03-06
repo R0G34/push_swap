@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 11:00:56 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/10 16:31:17 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:18:26 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:18:31 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,22 +55,3 @@ char	*ft_itoa(int n)
 	}
 	return (stritoa);
 }
-/**
- * The function "countdigits" calculates the number of digits in a
- * given integer.
- * 
- * @param n The parameter "n" in the countdigits function represents the
- * number for which we want to count the number of digits.
- * 
- * @return the number of digits in the given integer.
- */
-
-/**
- * The function `ft_itoa` converts an integer into a string representation.
- * 
- * @param n The parameter `n` is an integer that represents the number to be
- * converted to a string.
- * 
- * @return a dynamically allocated string (char*) that represents the input
- * integer (n) converted to a string.
- */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 14:48:30 by fsantill          #+#    #+#             */
-/*   Updated: 2023/09/29 16:18:59 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:17:56 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:17:59 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-/**
- * The function `ft_isalpha` checks if a given character
- * is an alphabetic character.
- * 
- * @param c The parameter "c" is of type "int" and represents a character.
- * 
- * @return 1 if the character is an alphabetic character
- * (either lowercase or uppercase), and 0 otherwise.
- */

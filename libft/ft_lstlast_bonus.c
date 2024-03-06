@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 13:07:18 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/12 16:27:32 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:19:10 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:19:13 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,3 @@ t_list	*ft_lstlast(t_list *lst)
 		lst = lst->next;
 	return (lst);
 }
-/**
- * The function ft_lstlast returns a pointer to the last element of a
- * linked list.
- * 
- * @param lst The parameter "lst" is a pointer to the first node of a
- * linked list.
- * 
- * @return the last node of the linked list.
- */

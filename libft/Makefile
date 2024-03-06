@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+         #
+#    By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/15 11:19:51 by fsantill          #+#    #+#              #
-#    Updated: 2023/12/04 12:29:39 by fsantill         ###   ########.fr        #
+#    Updated: 2024/03/06 17:55:53 by abausa-v         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME=libft.a
 CC=gcc
-CFLAGS=-Wall -Wextra -Wno-unused-result
+CFLAGS= -Wall -Werror -Wextra
 FT=		ft_isalpha.c		\
 		ft_isdigit.c		\
 		ft_isalnum.c		\

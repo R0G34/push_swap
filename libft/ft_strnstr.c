@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 13:27:09 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/03 11:16:40 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:23:07 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:23:10 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,3 @@ char	*ft_strnstr(const char *str, const char *find, size_t slen)
 	}
 	return (NULL);
 }
-
-/**
- * The function `ft_strnstr` searches for the first occurrence of a substring
- * within a given string, up to a specified length.
- * 
- * @param str A pointer to the string in which to search for the substring.
- * @param find The "find" parameter is a pointer to the substring that we are
- * searching for within the "str" string.
- * @param slen The parameter "slen" represents the maximum number of characters
- * to search in the string "str".
- * 
- * @return a pointer to the first occurrence of the string "find" within the
- * string "str" up to a maximum length of "slen". If the "find" string is
- * empty, it will return a pointer to the "str" string. If no occurrence is
- * found, it will return NULL.
- */

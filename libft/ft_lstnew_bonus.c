@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsantill <fsantill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abausa-v <abausa-v@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 13:21:30 by fsantill          #+#    #+#             */
-/*   Updated: 2023/10/12 16:26:57 by fsantill         ###   ########.fr       */
+/*   Created: 2024/03/06 19:19:23 by abausa-v          #+#    #+#             */
+/*   Updated: 2024/03/06 19:19:26 by abausa-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,3 @@ t_list	*ft_lstnew(void *content)
 	node->next = NULL;
 	return (node);
 }
-/**
- * The function ft_lstnew creates a new node for a linked list with the
- * given content.
- * 
- * @param content The "content" parameter is a void pointer that represents
- * the data that will be stored in the new node of the linked list.
- * It can be any type of data, as it is a generic pointer.
- * 
- * @return a pointer to a newly created t_list node.
- */
